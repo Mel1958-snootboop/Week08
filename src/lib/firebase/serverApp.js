@@ -28,9 +28,6 @@ export async function getAuthenticatedAppForUser() {
     }
   );
 
-  // Wait for the auth state to be ready before returning the app instance
-  // This ensures that the currentUser property is populated
-  // https://firebase.google.com/docs/reference/js/auth.md#user
   const auth = getAuth(firebaseServerApp);
   await auth.authStateReady();
 
