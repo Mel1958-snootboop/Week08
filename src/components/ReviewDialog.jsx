@@ -6,6 +6,7 @@ import { useEffect, useLayoutEffect, useRef } from "react";
 import RatingPicker from "@/src/components/RatingPicker.jsx";
 import { handleReviewFormSubmission } from "@/src/app/actions.js";
 
+// ReviewDialog component
 const ReviewDialog = ({
   isOpen,
   handleClose,
@@ -32,6 +33,7 @@ const ReviewDialog = ({
     }
   };
 
+  // prevent scrolling when dialog is open
   return (
     <dialog ref={dialog} onMouseDown={handleClick}>
       <form
@@ -81,4 +83,5 @@ const ReviewDialog = ({
   );
 };
 
+// export the ReviewDialog component
 export default ReviewDialog;

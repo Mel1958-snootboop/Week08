@@ -1,9 +1,13 @@
+// Firebase Storage imports
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
+// Import the initialized Firebase Storage instance
 import { storage } from "@/src/lib/firebase/clientApp";
 
+// Import Firestore function to update restaurant image reference
 import { updateRestaurantImageReference } from "@/src/lib/firebase/firestore";
 
+// Function to upload and update restaurant image
 export async function updateRestaurantImage(restaurantId, image) {
   try {
     if (!restaurantId) {
@@ -23,6 +27,7 @@ export async function updateRestaurantImage(restaurantId, image) {
   }
 }
 
+// Helper function to upload image to Firebase Storage
 async function uploadImage(restaurantId, image) {
   const filePath = `images/${restaurantId}/${image.name}`;
   const newImageRef = ref(storage, filePath);
