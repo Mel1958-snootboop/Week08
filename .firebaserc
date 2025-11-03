@@ -1,7 +1,8 @@
 {
   "projects": {
     "request.auth": "friendlyeats-codelab-2c405",
-    "friendlyeats-codelab": "friendlyeats-codelab-2c405"
+    "friendlyeats-codelab": "friendlyeats-codelab-2c405",
+    "default": "friendlyeats-codelab-2c405"
   },
   "targets": {},
   "etags": {}
